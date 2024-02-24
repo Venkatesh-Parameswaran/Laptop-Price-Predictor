@@ -3,4 +3,4 @@ sklearn
 pandas
 numpy
 pip
-scikit learn
+scikit-learn
