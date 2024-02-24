@@ -6,7 +6,7 @@ import numpy as np
 
 # Importing the model
 pipe = pickle.load(open('pipe.pkl','rb'))
-df =  pickle.load(open('df.pkl','rb'))
+df =  pd.read_csv('new_laptop.csv')
 
 st.title("Laptop Price Predictor")
 
