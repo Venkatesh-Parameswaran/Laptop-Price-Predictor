@@ -10,82 +10,18 @@ df = pd.read_csv('new_laptop.csv')
 # Set the background image
 background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
-# Add some styling to the page
-st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url("{background_image_url}") no-repeat center center fixed;
-        background-size: cover;
-    }}
-    .title {{
-        text-align: center;
-        margin-bottom: 0;
-    }}
-    .title-main {{
-        font-size: 79px;
-        color: #FFD700;
-        font-family: 'Georgia', serif;
-        text-shadow: 2px 2px #000000;
-    }}
-    .title-sub {{
-        font-size: 39px;
-        color: #FF4500;
-        font-family: 'Arial', sans-serif;
-    }}
-    .welcome-message {{
-        font-size: 30px;
-        color: #FFFFFF;
-        text-align: center;
-        font-family: 'Verdana', sans-serif;
-        margin-bottom: 20px;
-    }}
-    .hero-image {{
-        margin-top: -20px;
-    }}
-    .footer {{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #000000;
-        text-align: center;
-        padding: 10px;
-        font-size: 14px;
-        color: white;
-    }}
-    .selectbox-label {{
-        font-size: 25px;
-        color: #FFFFFF;
-        font-family: 'Arial', sans-serif;
-    }}
-    .stSubheader {{
-        font-size: 25px;
-        color:#FF4500;
-        font-family: 'Arial', sans-serif;
-    }}
-    .stMarkdown {{
-        color: #FFFFFF;
-        font-family: 'Arial', sans-serif;
-    }}
-    .expander-content {{
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #FFD700;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Display the background image
+st.image(background_image_url, use_column_width=True)
 
 # Title and Subtitle
-st.markdown('<div class="title"><h1 class="title-main">LapValue Predictor</h1><h2 class="title-sub">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align:center"><h1 style="color:#FFD700; font-size:79px; font-family:Georgia, serif; text-shadow:2px 2px #000000;">LapValue Predictor</h1><h2 style="color:#FF4500; font-size:39px; font-family:Arial, sans-serif;">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
 
 # Welcome Message
 st.markdown(
     '''
-    <div class="welcome-message">
-        <h2 style="font-size: 32px;">Welcome to LapValue Predictor!</h2>
-        <p style="font-size: 20px;">LapValue Predictor helps you estimate the value of your laptop based on its specifications. Just input the details, and get an instant price prediction!</p>
+    <div style="font-size:30px; color:#FFFFFF; text-align:center; font-family:Verdana, sans-serif; margin-bottom:20px;">
+        <h2 style="font-size:32px;">Welcome to LapValue Predictor!</h2>
+        <p>LapValue Predictor helps you estimate the value of your laptop based on its specifications. Just input the details, and get an instant price prediction!</p>
     </div>
     ''', 
     unsafe_allow_html=True
@@ -93,15 +29,12 @@ st.markdown(
 
 # Hero Image
 hero_img_url = "https://path_to_your_hero_image/laptop_hero.jpg"
-st.markdown(
-    f'<img src="{hero_img_url}" style="width:100%;" class="hero-image">', 
-    unsafe_allow_html=True
-)
+st.image(hero_img_url, use_column_width=True)
 
 # Short Guide
 st.markdown(
     '''
-    <div class="stSubheader">
+    <div style="font-size:25px; color:#FF4500; font-family:Arial, sans-serif;">
         <h2>How It Works:</h2>
         <p>1. Select the brand, type, and specifications of your laptop.</p>
         <p>2. Click on "Predict Price" to get an estimated value of your laptop.</p>
@@ -146,8 +79,8 @@ if st.button('Predict Price'):
 
 # Thank You Message
 st.markdown("""
-<h2 class="stSubheader">Thank You!</h2>
-<p class="stMarkdown">Thank you for using LapValue Predictor. We appreciate your interest and hope you found this application helpful.</p>
+<h2 style="font-size:25px; color:#FF4500; font-family:Arial, sans-serif;">Thank You!</h2>
+<p style="font-size:20px; color:#FFFFFF; font-family:Arial, sans-serif;">Thank you for using LapValue Predictor. We appreciate your interest and hope you found this application helpful.</p>
 """, unsafe_allow_html=True)
 
 # About Section
@@ -161,10 +94,27 @@ if st.button("About LapValue Predictor"):
 
 init_session_state()
 
-# if st.session_state.sidebar_open:
-#     st.sidebar.title("About")
-#     st.sidebar.info("""
-#         **LapValue Predictor** is a powerful tool designed to estimate the market value of laptops based on their specifications. It leverages machine learning algorithms to provide accurate price predictions.
+if st.session_state.sidebar_open:
+    st.sidebar.title("About")
+    st.sidebar.info("""
+        **LapValue Predictor** is a powerful tool designed to estimate the market value of laptops based on their specifications. It leverages machine learning algorithms to provide accurate price predictions.
 
-#         ### Key Features:
-#         - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost
+        ### Key Features:
+        - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost algorithm.
+        - **User-Friendly Interface**: Simple and intuitive for seamless user experience.
+        - **Interactive Web Application**: Built using Streamlit for interactive and responsive design.
+
+        ### How It Works:
+        1. **Enter Laptop Specifications**: Provide details like brand, type, RAM, etc.
+        2. **Predict Price**: Click the button to get an estimated market value.
+        
+        ### Developer:
+        Developed by Venkatesh, the LapValue Predictor showcases the power of data analytics and machine learning in practical applications. Have feedback or questions? Feel free to reach out!
+    """)
+
+# Footer
+st.markdown("""
+<div style="position:fixed; left:0; bottom:0; width:100%; background-color:#000000; text-align:center; padding:10px; font-size:14px; color:white;">
+    <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
+</div>
+""", unsafe_allow_html=True)
