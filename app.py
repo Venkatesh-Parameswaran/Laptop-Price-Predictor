@@ -19,7 +19,7 @@ st.markdown(
         background-size: cover;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity here */
         padding: 1rem;
     }}
     </style>
@@ -126,10 +126,9 @@ if st.session_state.sidebar_open:
         Developed by Venkatesh, the LapValue Predictor showcases the power of data analytics and machine learning in practical applications. Have feedback or questions? Feel free to reach out!
     """)
 
-# # Footer
-# st.markdown("""
-# <div style="position:fixed; left:0; bottom:0; width:100%; background-color:#000000; text-align:center; padding:10px; font-size:14px; color:white;">
-#     <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
-# </div>
-# """, unsafe_allow_html=True)
-
+# Footer
+st.markdown("""
+<div style="position:fixed; left:0; bottom:0; width:100%; background-color:#000000; text-align:center; padding:10px; font-size:14px; color:white;">
+    <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
+</div>
+""", unsafe_allow_html=True)
