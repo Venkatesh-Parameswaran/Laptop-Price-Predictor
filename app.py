@@ -27,6 +27,7 @@ background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran
 #     unsafe_allow_html=True
 # )
 
+
 # Add some styling to the page
 st.markdown(
     f"""
@@ -39,11 +40,37 @@ st.markdown(
     }}
     .stApp {{
         background-color: rgba(255, 255, 255, 0.5); /* Transparent background for Streamlit elements */
+        color: #FFFFFF; /* Font color */
+        font-size: 20px; /* Font size */
+        font-family: Arial, sans-serif; /* Font family */
+    }}
+    .stTextInput, .stSelectbox, .stTextArea {{
+        color: #FFFFFF !important; /* Font color for input elements */
+    }}
+    .stButton>button {{
+        color: #FFFFFF !important; /* Font color for buttons */
+    }}
+    .stDataFrame td, .stDataFrame th {{
+        color: #FFFFFF !important; /* Font color for dataframes */
+    }}
+    .stMarkdown {{
+        color: #FFFFFF; /* Font color for markdown */
+    }}
+    .stMarkdown a {{
+        color: #FF4500; /* Font color for links */
+    }}
+    .stAlert > div > div > div > div, .stException > div > div > div > div {{
+        color: #FFFFFF !important; /* Font color for alerts and exceptions */
     }}
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# Your Streamlit app content goes here
+# For example:
+st.title("Laptop Price Predictor")
+st.write("This is where your content goes.")
 
 # Title and Subtitle
 st.markdown('<div style="text-align:center"><h1 style="color:#FFD700; font-size:79px; font-family:Georgia, serif; text-shadow:2px 2px #000000;">LapValue Predictor</h1><h2 style="color:#FF4500; font-size:39px; font-family:Arial, sans-serif;">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
