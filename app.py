@@ -38,7 +38,7 @@ st.markdown(
         background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.3); /* Transparent background for Streamlit elements */
+        background-color: rgba(255, 255, 255, 0.4); /* Transparent background for Streamlit elements */
     }}
     </style>
     """,
