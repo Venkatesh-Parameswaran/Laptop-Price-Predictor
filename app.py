@@ -10,6 +10,23 @@ df = pd.read_csv('new_laptop.csv')
 # Set the background image
 background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
+# # Add some styling to the page
+# st.markdown(
+#     f"""
+#     <style>
+#     body {{
+#         background-image: url("{background_image_url}");
+#         background-size: cover;
+#     }}
+#     .stApp {{
+#         background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity here */
+#         padding: 1rem;
+#     }}
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 # Add some styling to the page
 st.markdown(
     f"""
@@ -17,10 +34,11 @@ st.markdown(
     body {{
         background-image: url("{background_image_url}");
         background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity here */
-        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0); /* Transparent background for Streamlit elements */
     }}
     </style>
     """,
