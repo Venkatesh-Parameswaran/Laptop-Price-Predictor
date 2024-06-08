@@ -8,17 +8,30 @@ pipe = pickle.load(open('pipe.pkl', 'rb'))
 df = pd.read_csv('new_laptop.csv')
 
 # Set the background image
-background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/blob/laptop%20bk2.jpg"
+background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
 
-page_bg_img = f'''
-<style>
-    .stApp {{
-        background-image: url("{background_image_url}");
+# page_bg_img = f'''
+# <style>
+#     .stApp {{
+#         background-image: url("{background_image_url}");
+#         background-size: cover;
+#         background-repeat: no-repeat;
+#         background-attachment: fixed;
+#     }}
+
+ #Add some styling to the page
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url("{background_image_url}") no-repeat center center fixed;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
     .title {{
         text-align: center;
         margin-bottom: 0;
