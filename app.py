@@ -161,10 +161,10 @@ if st.button("About LapValue Predictor"):
 
 init_session_state()
 
-if st.session_state.sidebar_open:
-    st.sidebar.title("About")
-    st.sidebar.info("""
-        **LapValue Predictor** is a powerful tool designed to estimate the market value of laptops based on their specifications. It leverages machine learning algorithms to provide accurate price predictions.
+# if st.session_state.sidebar_open:
+#     st.sidebar.title("About")
+#     st.sidebar.info("""
+#         **LapValue Predictor** is a powerful tool designed to estimate the market value of laptops based on their specifications. It leverages machine learning algorithms to provide accurate price predictions.
 
-        ### Key Features:
-        - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost
+#         ### Key Features:
+#         - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost
