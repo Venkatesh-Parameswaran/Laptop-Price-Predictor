@@ -8,7 +8,7 @@ pipe = pickle.load(open('pipe.pkl', 'rb'))
 df = pd.read_csv('new_laptop.csv')
 
 # Set the background image
-background_image_url = "https://path_to_your_image/laptop%20bk2.jpg"
+background_image_url = "https://github.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/blob/12ecc36f5e24e2e3b1a987d461bf806fd980a8f7/laptop%20bk2.jpg"
 
 page_bg_img = f'''
 <style>
