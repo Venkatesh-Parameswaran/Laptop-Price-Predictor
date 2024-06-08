@@ -10,8 +10,22 @@ df = pd.read_csv('new_laptop.csv')
 # Set the background image
 background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
-# Display the background image
-st.image(background_image_url, use_column_width=True)
+# Add some styling to the page
+st.markdown(
+    f"""
+    <style>
+    body {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+    }}
+    .stApp {{
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1rem;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Title and Subtitle
 st.markdown('<div style="text-align:center"><h1 style="color:#FFD700; font-size:79px; font-family:Georgia, serif; text-shadow:2px 2px #000000;">LapValue Predictor</h1><h2 style="color:#FF4500; font-size:39px; font-family:Arial, sans-serif;">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
@@ -118,3 +132,4 @@ st.markdown("""
     <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
 </div>
 """, unsafe_allow_html=True)
+``
