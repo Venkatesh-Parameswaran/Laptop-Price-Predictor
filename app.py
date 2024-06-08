@@ -10,17 +10,7 @@ df = pd.read_csv('new_laptop.csv')
 # Set the background image
 background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
-
-# page_bg_img = f'''
-# <style>
-#     .stApp {{
-#         background-image: url("{background_image_url}");
-#         background-size: cover;
-#         background-repeat: no-repeat;
-#         background-attachment: fixed;
-#     }}
-
- #Add some styling to the page
+# Add some styling to the page
 st.markdown(
     f"""
     <style>
@@ -28,10 +18,6 @@ st.markdown(
         background: url("{background_image_url}") no-repeat center center fixed;
         background-size: cover;
     }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
     .title {{
         text-align: center;
         margin-bottom: 0;
@@ -86,9 +72,10 @@ st.markdown(
         background-color: rgba(0, 0, 0, 0.7);
         color: #FFD700;
     }}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Title and Subtitle
 st.markdown('<div class="title"><h1 class="title-main">LapValue Predictor</h1><h2 class="title-sub">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
@@ -97,8 +84,8 @@ st.markdown('<div class="title"><h1 class="title-main">LapValue Predictor</h1><h
 st.markdown(
     '''
     <div class="welcome-message">
-        <h2 style="font-size: 32px; color: #FFFFFF;">Welcome to LapValue Predictor!</h2>
-        <p>LapValue Predictor helps you estimate the value of your laptop based on its specifications. Just input the details, and get an instant price prediction!</p>
+        <h2 style="font-size: 32px;">Welcome to LapValue Predictor!</h2>
+        <p style="font-size: 20px;">LapValue Predictor helps you estimate the value of your laptop based on its specifications. Just input the details, and get an instant price prediction!</p>
     </div>
     ''', 
     unsafe_allow_html=True
@@ -180,21 +167,4 @@ if st.session_state.sidebar_open:
         **LapValue Predictor** is a powerful tool designed to estimate the market value of laptops based on their specifications. It leverages machine learning algorithms to provide accurate price predictions.
 
         ### Key Features:
-        - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost algorithm.
-        - **User-Friendly Interface**: Simple and intuitive for seamless user experience.
-        - **Interactive Web Application**: Built using Streamlit for interactive and responsive design.
-
-        ### How It Works:
-        1. **Enter Laptop Specifications**: Provide details like brand, type, RAM, etc.
-        2. **Predict Price**: Click the button to get an estimated market value.
-        
-        ### Developer:
-        Developed by Venkatesh, the LapValue Predictor showcases the power of data analytics and machine learning in practical applications. Have feedback or questions? Feel free to reach out!
-    """)
-
-# Footer
-st.markdown("""
-<div class="footer">
-    <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
-</div>
-""", unsafe_allow_html=True)
+        - **Accurate Predictions**: Utilizing data analytics techniques and the XGBoost
