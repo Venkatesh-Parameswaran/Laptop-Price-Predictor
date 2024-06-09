@@ -34,7 +34,7 @@ st.markdown(
         font-family: Arial, sans-serif; /* Font family */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
     }}
-    .stTextInput, .stSelectbox, .stTextArea {{
+    .stTextInput, .stSelectbox, .stTextArea, .stNumberInput {{
         color: black !important; /* Dark gray font color for input elements */
         background-color: grey !important; /* White background for input elements */
     }}
