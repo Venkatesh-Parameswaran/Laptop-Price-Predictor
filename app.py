@@ -21,28 +21,28 @@ st.markdown(
         background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0); /* Semi-transparent background for Streamlit elements */
-        color: #000000; /* Black font color for better contrast on lighter background */
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for Streamlit elements */
+        color: #1a1a1a; /* Dark gray font color for better contrast on lighter background */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
     }}
     .stTextInput, .stSelectbox, .stTextArea {{
-        color: #000000 !important; /* Black font color for input elements */
+        color: #1a1a1a !important; /* Dark gray font color for input elements */
     }}
     .stButton>button {{
-        color: #000000 !important; /* Black font color for buttons */
+        color: #1a1a1a !important; /* Dark gray font color for buttons */
     }}
     .stDataFrame td, .stDataFrame th {{
-        color: #000000 !important; /* Black font color for dataframes */
+        color: #1a1a1a !important; /* Dark gray font color for dataframes */
     }}
     .stMarkdown {{
-        color: #000000; /* Black font color for markdown */
+        color: #1a1a1a; /* Dark gray font color for markdown */
     }}
     .stMarkdown a {{
-        color: #0000FF; /* Blue font color for links */
+        color: #003366; /* Dark blue font color for links */
     }}
     .stAlert > div > div > div > div, .stException > div > div > div > div {{
-        color: #000000 !important; /* Black font color for alerts and exceptions */
+        color: #1a1a1a !important; /* Dark gray font color for alerts and exceptions */
     }}
     .title-main {{
         font-size: 79px;
@@ -57,7 +57,7 @@ st.markdown(
     }}
     .welcome-message {{
         font-size: 30px;
-        color: #000000;
+        color: #1a1a1a;
         text-align: center;
         font-family: 'Verdana', sans-serif;
         margin-bottom: 20px;
@@ -75,7 +75,7 @@ st.markdown(
     }}
     .selectbox-label {{
         font-size: 25px;
-        color: #000000;
+        color: #1a1a1a;
         font-family: 'Arial', sans-serif;
     }}
     .stSubheader {{
@@ -154,7 +154,7 @@ if st.button('Predict Price'):
     query = np.array([company, type, ram, weight, touchscreen, ips, ppi, cpu, hdd, ssd, gpu, os])
     query = query.reshape(1, 12)
     predicted_price = np.exp(pipe.predict(query)[0])
-    st.markdown(f'<h2 style="color: black;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="color: #1a1a1a;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
 
 # Thank You Message
 st.markdown("""
