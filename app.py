@@ -32,7 +32,7 @@ st.markdown(
         color: white; /* White font color */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
     }}
     .stTextInput, .stSelectbox, .stTextArea, .stNumberInput {{
         color: black !important; /* Dark gray font color for input elements */
@@ -81,7 +81,7 @@ st.markdown(
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
         padding: 10px;
         font-size: 14px;
