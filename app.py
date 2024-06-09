@@ -123,7 +123,7 @@ st.markdown(
 )
 
 # Hero Image
-hero_img_url = "https://i.pinimg.com/564x/4e/84/a3/4e84a319b8d195decdb67fd63ce5ec0b.jpg"
+hero_img_url = "https://github.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/blob/main/laptop%20heroimg1.jpg"
 st.markdown(
     f'<img src="{hero_img_url}" style="width:100%;" class="hero-image">',
     unsafe_allow_html=True
