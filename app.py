@@ -90,7 +90,7 @@ st.markdown(
     }}
     .selectbox-label {{
         font-size: 25px;
-        color: white;
+        color: #FFD700;
         font-family: 'Arial', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
