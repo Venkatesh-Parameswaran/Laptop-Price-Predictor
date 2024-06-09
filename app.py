@@ -7,14 +7,14 @@ import numpy as np
 pipe = pickle.load(open('pipe.pkl', 'rb'))
 df = pd.read_csv('new_laptop.csv')
 
-# # # Set the background image URL
-# background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk11.jpg"
+# # Set the background image URL
+background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk2.jpg"
 
 # # Set the background image URL
 # background_image_url = "https://i.pinimg.com/564x/db/b9/c8/dbb9c841f334a988f157fbabf3e38576.jpg"
 
-# Set the background image URL
-background_image_url = "https://i.pinimg.com/564x/fe/eb/41/feeb414fc44fac366ca804e1c6c8c363.jpg"
+# # Set the background image URL
+# background_image_url = "https://i.pinimg.com/564x/fe/eb/41/feeb414fc44fac366ca804e1c6c8c363.jpg"
 
 # Add some styling to the page
 st.markdown(
