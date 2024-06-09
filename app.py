@@ -7,26 +7,8 @@ import numpy as np
 pipe = pickle.load(open('pipe.pkl', 'rb'))
 df = pd.read_csv('new_laptop.csv')
 
-# Set the background image
+# Set the background image URL
 background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk6.jpg"
-
-# Add some styling to the page
-st.markdown(
-    f"""
-    <style>
-    body {{
-        background-image: url("{background_image_url}");
-        background-size: cover;
-    }}
-    .stApp {{
-        background-color: rgba(255, 255, 255, 0); /* Adjust opacity here */
-        padding: 1rem;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # Add some styling to the page
 st.markdown(
@@ -39,46 +21,85 @@ st.markdown(
         background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255,0); /* Transparent background for Streamlit elements */
-        color: #FFFFFF; /* Font color */
-        font-size: 20px; /* Font size */
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for Streamlit elements */
+        color: #000000; /* Black font color for better contrast on lighter background */
+        font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
     }}
     .stTextInput, .stSelectbox, .stTextArea {{
-        color: #FFFFFF !important; /* Font color for input elements */
+        color: #000000 !important; /* Black font color for input elements */
     }}
     .stButton>button {{
-        color: #FFFFFF !important; /* Font color for buttons */
+        color: #000000 !important; /* Black font color for buttons */
     }}
     .stDataFrame td, .stDataFrame th {{
-        color: #FFFFFF !important; /* Font color for dataframes */
+        color: #000000 !important; /* Black font color for dataframes */
     }}
     .stMarkdown {{
-        color: #FFFFFF; /* Font color for markdown */
+        color: #000000; /* Black font color for markdown */
     }}
     .stMarkdown a {{
-        color: #FF4500; /* Font color for links */
+        color: #FF4500; /* Orange font color for links */
     }}
     .stAlert > div > div > div > div, .stException > div > div > div > div {{
-        color: #FFFFFF !important; /* Font color for alerts and exceptions */
+        color: #000000 !important; /* Black font color for alerts and exceptions */
+    }}
+    .title-main {{
+        font-size: 79px;
+        color: #FFD700;
+        font-family: 'Georgia', serif;
+        text-shadow: 2px 2px #000000;
+    }}
+    .title-sub {{
+        font-size: 39px;
+        color: #FF4500;
+        font-family: 'Arial', sans-serif;
+    }}
+    .welcome-message {{
+        font-size: 30px;
+        color: #000000;
+        text-align: center;
+        font-family: 'Verdana', sans-serif;
+        margin-bottom: 20px;
+    }}
+    .footer {{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+    }}
+    .selectbox-label {{
+        font-size: 25px;
+        color: #000000;
+        font-family: 'Arial', sans-serif;
+    }}
+    .stSubheader {{
+        font-size: 25px;
+        color:#FF4500;
+        font-family: 'Arial', sans-serif;
+    }}
+    .expander-content {{
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #FFD700;
     }}
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# For example:
-st.title("Laptop Price Predictor")
-st.write("This is where your content goes.")
-
 # Title and Subtitle
-st.markdown('<div style="text-align:center"><h1 style="color:#FFD700; font-size:79px; font-family:Georgia, serif; text-shadow:2px 2px #000000;">LapValue Predictor</h1><h2 style="color:#FF4500; font-size:39px; font-family:Arial, sans-serif;">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align:center"><h1 class="title-main">LapValue Predictor</h1><h2 class="title-sub">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
 
 # Welcome Message
 st.markdown(
     '''
-    <div style="font-size:30px; color:#FFFFFF; text-align:center; font-family:Verdana, sans-serif; margin-bottom:20px;">
-        <h2 style="font-size:32px;">Welcome to LapValue Predictor!</h2>
+    <div class="welcome-message">
+        <h2 style="font-size: 32px;">Welcome to LapValue Predictor!</h2>
         <p>LapValue Predictor helps you estimate the value of your laptop based on its specifications. Just input the details, and get an instant price prediction!</p>
     </div>
     ''', 
@@ -92,7 +113,7 @@ st.image(hero_img_url, use_column_width=True)
 # Short Guide
 st.markdown(
     '''
-    <div style="font-size:25px; color:#FF4500; font-family:Arial, sans-serif;">
+    <div class="stSubheader">
         <h2>How It Works:</h2>
         <p>1. Select the brand, type, and specifications of your laptop.</p>
         <p>2. Click on "Predict Price" to get an estimated value of your laptop.</p>
@@ -133,12 +154,12 @@ if st.button('Predict Price'):
     query = np.array([company, type, ram, weight, touchscreen, ips, ppi, cpu, hdd, ssd, gpu, os])
     query = query.reshape(1, 12)
     predicted_price = np.exp(pipe.predict(query)[0])
-    st.markdown(f'<h2 style="color: white;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="color: black;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
 
 # Thank You Message
 st.markdown("""
-<h2 style="font-size:25px; color:#FF4500; font-family:Arial, sans-serif;">Thank You!</h2>
-<p style="font-size:20px; color:#FFFFFF; font-family:Arial, sans-serif;">Thank you for using LapValue Predictor. We appreciate your interest and hope you found this application helpful.</p>
+<h2 class="stSubheader">Thank You!</h2>
+<p class="stMarkdown">Thank you for using LapValue Predictor. We appreciate your interest and hope you found this application helpful.</p>
 """, unsafe_allow_html=True)
 
 # About Section
@@ -172,7 +193,7 @@ if st.session_state.sidebar_open:
 
 # Footer
 st.markdown("""
-<div style="position:fixed; left:0; bottom:0; width:100%; background-color:#000000; text-align:center; padding:10px; font-size:14px; color:white;">
+<div class="footer">
     <p>© 2024 LapValue Predictor. All rights reserved. | Developed by Venkatesh</p>
 </div>
 """, unsafe_allow_html=True)
