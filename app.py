@@ -101,7 +101,7 @@ st.markdown(
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .expander-content {{
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0);
         color: #FFD700;
     }}
     </style>
