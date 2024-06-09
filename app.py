@@ -19,7 +19,7 @@ st.markdown(
         background-size: cover;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.4); /* Adjust opacity here */
+        background-color: rgba(255, 255, 255, 0); /* Adjust opacity here */
         padding: 1rem;
     }}
     </style>
