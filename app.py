@@ -173,7 +173,7 @@ if st.button('Predict Price'):
     query = np.array([company, type, ram, weight, touchscreen, ips, ppi, cpu, hdd, ssd, gpu, os])
     query = query.reshape(1, 12)
     predicted_price = np.exp(pipe.predict(query)[0])
-    st.markdown(f'<h2 style="color: ##FFD700;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="color: #FFD700;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
 
 # Thank You Message
 st.markdown("""
