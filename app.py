@@ -23,7 +23,7 @@ st.markdown(
     body {{
         background-image: url("{background_image_url}");
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         background-attachment: fixed;
         color: white;
     }}
