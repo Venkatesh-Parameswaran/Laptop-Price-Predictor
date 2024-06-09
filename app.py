@@ -36,7 +36,7 @@ st.markdown(
     }}
     .stTextInput, .stSelectbox, .stTextArea {{
         color: black !important; /* Dark gray font color for input elements */
-        background-color: white !important; /* White background for input elements */
+        background-color: grey !important; /* White background for input elements */
     }}
     .stButton>button {{
         color: white !important; /* White font color for buttons */
