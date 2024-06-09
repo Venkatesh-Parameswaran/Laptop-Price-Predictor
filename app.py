@@ -11,7 +11,7 @@ df = pd.read_csv('new_laptop.csv')
 # background_image_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop%20bk11.jpg"
 
 # Set the background image URL
-background_image_url = "https://i.pinimg.com/564x/67/1b/0d/671b0d66e9c2c3706e8b4d464985df29.jpg"
+background_image_url = "https://i.pinimg.com/736x/f8/28/fb/f828fbd5be374b71bbfe6b9287788d19.jpg"
 
 # Add some styling to the page
 st.markdown(
