@@ -21,28 +21,28 @@ st.markdown(
         background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255,0.3); /* Semi-transparent background for Streamlit elements */
-        color: #1a1a1a; /* Dark gray font color for better contrast on lighter background */
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for Streamlit elements */
+        color: #333333; /* Darker gray font color */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
     }}
     .stTextInput, .stSelectbox, .stTextArea {{
-        color: #1a1a1a !important; /* Dark gray font color for input elements */
+        color: #333333 !important; /* Darker gray font color for input elements */
     }}
     .stButton>button {{
-        color: #1a1a1a !important; /* Dark gray font color for buttons */
+        color: #333333 !important; /* Darker gray font color for buttons */
     }}
     .stDataFrame td, .stDataFrame th {{
-        color: #1a1a1a !important; /* Dark gray font color for dataframes */
+        color: #333333 !important; /* Darker gray font color for dataframes */
     }}
     .stMarkdown {{
-        color: #1a1a1a; /* Dark gray font color for markdown */
+        color: #333333; /* Darker gray font color for markdown */
     }}
     .stMarkdown a {{
-        color: #003366; /* Dark blue font color for links */
+        color: #0044cc; /* Darker blue font color for links */
     }}
     .stAlert > div > div > div > div, .stException > div > div > div > div {{
-        color: #1a1a1a !important; /* Dark gray font color for alerts and exceptions */
+        color: #333333 !important; /* Darker gray font color for alerts and exceptions */
     }}
     .title-main {{
         font-size: 79px;
@@ -57,7 +57,7 @@ st.markdown(
     }}
     .welcome-message {{
         font-size: 30px;
-        color: #1a1a1a;
+        color: #333333;
         text-align: center;
         font-family: 'Verdana', sans-serif;
         margin-bottom: 20px;
@@ -75,12 +75,12 @@ st.markdown(
     }}
     .selectbox-label {{
         font-size: 25px;
-        color: #1a1a1a;
+        color: #333333;
         font-family: 'Arial', sans-serif;
     }}
     .stSubheader {{
         font-size: 25px;
-        color:#FF4500;
+        color: #0044cc;
         font-family: 'Arial', sans-serif;
     }}
     .expander-content {{
@@ -107,8 +107,11 @@ st.markdown(
 )
 
 # Hero Image
-hero_img_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop heroimg1"
-st.image(hero_img_url, use_column_width=True)
+hero_img_url = "https://path_to_your_hero_image/laptop_hero.jpg"
+st.markdown(
+    f'<img src="{hero_img_url}" style="width:100%;" class="hero-image">',
+    unsafe_allow_html=True
+)
 
 # Short Guide
 st.markdown(
@@ -154,7 +157,7 @@ if st.button('Predict Price'):
     query = np.array([company, type, ram, weight, touchscreen, ips, ppi, cpu, hdd, ssd, gpu, os])
     query = query.reshape(1, 12)
     predicted_price = np.exp(pipe.predict(query)[0])
-    st.markdown(f'<h2 style="color: #1a1a1a;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="color: #333333;">The predicted price of this configuration is ${int(predicted_price)}</h2>', unsafe_allow_html=True)
 
 # Thank You Message
 st.markdown("""
