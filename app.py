@@ -107,7 +107,7 @@ st.markdown(
 )
 
 # Hero Image
-hero_img_url = "https://path_to_your_hero_image/laptop_hero.jpg"
+hero_img_url = "https://raw.githubusercontent.com/Venkatesh-Parameswaran/Laptop-Price-Predictor/main/laptop heroimg1"
 st.image(hero_img_url, use_column_width=True)
 
 # Short Guide
