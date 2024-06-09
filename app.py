@@ -25,69 +25,80 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        color: white;
     }}
-     .stApp {{
-          background-color: rgba(0, 0, 0,0.4); /* Semi-transparent background for Streamlit elements */
-         color: #333333; /* Darker gray font color */
-         font-size: 18px; /* Font size */
-         font-family: Arial, sans-serif; /* Font family */
-     }}
+    .stApp {{
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for Streamlit elements */
+        color: white; /* White font color */
+        font-size: 18px; /* Font size */
+        font-family: Arial, sans-serif; /* Font family */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    }}
     .stTextInput, .stSelectbox, .stTextArea {{
-        color: #333333 !important; /* Darker gray font color for input elements */
+        color: black !important; /* Dark gray font color for input elements */
+        background-color: white !important; /* White background for input elements */
     }}
     .stButton>button {{
-        color: #333333 !important; /* Darker gray font color for buttons */
+        color: white !important; /* White font color for buttons */
+        background-color: #007BFF !important; /* Blue background for buttons */
+        border: none; /* Remove button border */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Button shadow */
     }}
     .stDataFrame td, .stDataFrame th {{
-        color: #333333 !important; /* Darker gray font color for dataframes */
+        color: white !important; /* White font color for dataframes */
     }}
     .stMarkdown {{
-        color: #333333; /* Darker gray font color for markdown */
+        color: white; /* White font color for markdown */
     }}
     .stMarkdown a {{
-        color: #0044cc; /* Darker blue font color for links */
+        color: #FFD700; /* Gold font color for links */
     }}
     .stAlert > div > div > div > div, .stException > div > div > div > div {{
-        color: #333333 !important; /* Darker gray font color for alerts and exceptions */
+        color: white !important; /* White font color for alerts and exceptions */
     }}
     .title-main {{
         font-size: 79px;
         color: #FFD700;
         font-family: 'Georgia', serif;
-        text-shadow: 2px 2px #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .title-sub {{
         font-size: 39px;
         color: #FF4500;
         font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .welcome-message {{
         font-size: 30px;
-        color: #333333;
+        color: white;
         text-align: center;
         font-family: 'Verdana', sans-serif;
         margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .footer {{
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #000000;
+        background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
         padding: 10px;
         font-size: 14px;
         color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .selectbox-label {{
         font-size: 25px;
-        color: #333333;
+        color: white;
         font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .stSubheader {{
         font-size: 25px;
-        color: #0044cc;
+        color: #FFD700;
         font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }}
     .expander-content {{
         background-color: rgba(0, 0, 0, 0.7);
@@ -97,7 +108,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # Title and Subtitle
 st.markdown('<div style="text-align:center"><h1 class="title-main">LapValue Predictor</h1><h2 class="title-sub">Find Your Laptop’s Worth Instantly!</h2></div>', unsafe_allow_html=True)
 
