@@ -57,7 +57,7 @@ st.markdown(
         color: white !important; /* White font color for alerts and exceptions */
     }}
     .title-main {{
-        font-size: 75px;
+        font-size: 76px;
         color: #FFD700;
         font-family: 'Georgia', serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
