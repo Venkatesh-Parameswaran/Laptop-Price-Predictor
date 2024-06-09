@@ -28,11 +28,11 @@ st.markdown(
         color: white;
     }}
     .stApp {{
-        background-color: rgba(75, 75, 75, 0.5); /* Semi-transparent background for Streamlit elements */
+        background-color: rgba(75, 75, 75, 0.2); /* Semi-transparent background for Streamlit elements */
         color: white; /* White font color */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
     }}
     .stTextInput, .stSelectbox, .stTextArea, .stNumberInput {{
         color: black !important; /* Dark gray font color for input elements */
