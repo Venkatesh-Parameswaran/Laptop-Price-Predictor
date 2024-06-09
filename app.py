@@ -113,7 +113,7 @@ st.markdown(
 )
 
 # Hero Image
-hero_img_url = "https://i.pinimg.com/564x/34/9b/6a/349b6a3e7f7d1d990810dcf5eed7a7eb.jpg"
+hero_img_url = "https://i.pinimg.com/564x/9d/3e/72/9d3e727425f5cb0b8d77103ec0c486df.jpg"
 st.markdown(
     f'<img src="{hero_img_url}" style="width:100%;" class="hero-image">',
     unsafe_allow_html=True
