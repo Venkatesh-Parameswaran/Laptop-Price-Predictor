@@ -28,7 +28,7 @@ st.markdown(
         color: white;
     }}
     .stApp {{
-        background-color: rgba(100, 100, 100, 0.5); /* Semi-transparent background for Streamlit elements */
+        background-color: rgba(75, 75, 75, 0.5); /* Semi-transparent background for Streamlit elements */
         color: white; /* White font color */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
