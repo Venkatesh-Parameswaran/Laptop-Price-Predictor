@@ -21,7 +21,7 @@ st.markdown(
         background-attachment: fixed;
     }}
     .stApp {{
-        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for Streamlit elements */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for Streamlit elements */
         color: #1a1a1a; /* Dark gray font color for better contrast on lighter background */
         font-size: 18px; /* Font size */
         font-family: Arial, sans-serif; /* Font family */
